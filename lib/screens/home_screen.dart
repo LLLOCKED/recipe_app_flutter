@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Row(
                     children: [
                       AppIcon(
-                          icon: Icons.timelapse,
+                          icon: Icons.favorite,
                           onPressed: () {
                             Navigator.push(
                               context,

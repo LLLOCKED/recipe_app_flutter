@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:recipe_app/widgets/recipe_card.dart';
 
 import '../models/recipe_model.dart';
@@ -34,8 +35,14 @@ class _RecipesListState extends State<RecipesList> {
           } else {
             return Column(
               children: <Widget>[
-                const LargeText(
-                    text: '5 Recipes found 💫', color: Colors.black),
+                snapshot.data != null
+                    ? Padding(
+                        padding: EdgeInsets.only(bottom: 10.h),
+                        child: LargeText(
+                            text: '${snapshot.data!.length} Recipes found 💫',
+                            color: Colors.black),
+                      )
+                    : Container(),
                 ListView.builder(
                     physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,

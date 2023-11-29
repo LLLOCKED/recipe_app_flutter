@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:recipe_app/widgets/large_text.dart';
 import 'package:recipe_app/widgets/recipes_list.dart';
 import 'package:recipe_app/widgets/top_bar.dart';
 
@@ -27,6 +26,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Stack(children: [
         Positioned(
             top: 30.h,

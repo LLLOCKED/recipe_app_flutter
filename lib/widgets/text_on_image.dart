@@ -15,7 +15,7 @@ class TextOnImage extends StatelessWidget {
       left: x * MediaQuery.of(context).size.width,
       top: y * MediaQuery.of(context).size.height,
       child: Container(
-        padding: EdgeInsets.all(5.r),
+        padding: EdgeInsets.all(10.r),
         decoration: BoxDecoration(
             color: Colors.black.withOpacity(0.4),
             borderRadius: BorderRadius.all(Radius.circular(10.r))),
@@ -23,7 +23,7 @@ class TextOnImage extends StatelessWidget {
           name, // Текст, який ви хочете відобразити
           style: const TextStyle(
             fontSize: 16.0, // Розмір шрифту
-            color: Colors.black, // Колір тексту
+            color: Colors.white, // Колір тексту
           ),
         ),
       ),

@@ -86,17 +86,17 @@ class _PictureScreenState extends State<PictureScreen> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Container(
-                  padding: EdgeInsets.all(10.r),
+                  padding: EdgeInsets.all(15.r),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(20.r)),
                       border: Border.all(color: Colors.white, width: 1.r),
                       color: Theme.of(context)
                           .colorScheme
                           .secondary
-                          .withOpacity(0.4)),
+                          .withOpacity(0.6)),
                   child: Text(
                     namesString,
-                    style: const TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white, fontSize: 14),
                   ),
                 ),
                 SizedBox(
@@ -105,7 +105,7 @@ class _PictureScreenState extends State<PictureScreen> {
                 FloatingActionButton(
                   backgroundColor: Theme.of(context).colorScheme.background,
                   shape: RoundedRectangleBorder(
-                      side: const BorderSide(width: 3, color: Colors.black26),
+                      side: const BorderSide(width: 2, color: Colors.black26),
                       borderRadius: BorderRadius.circular(100)),
                   onPressed: () async {
                     Navigator.of(context).push(
