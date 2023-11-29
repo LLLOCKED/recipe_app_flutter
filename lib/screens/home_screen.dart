@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:recipe_app/screens/favorite_screen.dart';
 import 'package:recipe_app/screens/scaner_screen.dart';
 import 'package:recipe_app/widgets/app_icon.dart';
 import 'package:recipe_app/widgets/large_text.dart';
@@ -24,28 +25,40 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 20.h),
+              padding: EdgeInsets.only(top: 20.h, left: 20.w, right: 20.w),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SvgPicture.asset(
-                    'assets/images/cook-face-svgrepo-com.svg',
-                    height: 40.0,
-                    width: 40.0,
+                  Row(
+                    children: [
+                      SvgPicture.asset(
+                        'assets/images/cook-face-svgrepo-com.svg',
+                        height: 40.0,
+                        width: 40.0,
+                      ),
+                      const LargeText(
+                        text: "Scan-n-Cook",
+                        color: Colors.black87,
+                      ),
+                    ],
                   ),
-                  const LargeText(
-                    text: "Scan-n-Cook",
-                    color: Colors.black87,
-                  ),
-                  // Row(
-                  //   children: [
-                  //     AppIcon(icon: Icons.timelapse, onPressed: () {}),
-                  //     SizedBox(
-                  //       width: 10.w,
-                  //     ),
-                  //     AppIcon(icon: Icons.person, onPressed: () {}),
-                  //   ],
-                  // )
+                  Row(
+                    children: [
+                      AppIcon(
+                          icon: Icons.timelapse,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const FavoriteScreen()),
+                            );
+                          }),
+                      // SizedBox(
+                      //   width: 10.w,
+                      // ),
+                      // AppIcon(icon: Icons.person, onPressed: () {}),
+                    ],
+                  )
                 ],
               ),
             ),

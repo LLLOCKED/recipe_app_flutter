@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:recipe_app/utils/favorite_recipes_manager.dart';
 import 'package:recipe_app/widgets/medium_text.dart';
 
 import '../constants.dart';
@@ -37,7 +38,15 @@ class RecipeScreen extends StatelessWidget {
                   )),
             ),
             pinned: true,
-            // floating: true,
+            actions: [
+              IconButton(
+                icon: const Icon(Icons.favorite_border),
+                onPressed: () async {
+                  final favoritesManager = FavoriteRecipesManager();
+                  await favoritesManager.addFavoriteRecipe(recipe);
+                },
+              ),
+            ],
             expandedHeight: 300.h,
             flexibleSpace: FlexibleSpaceBar(
               // title: MediumText(text: recipe.title),

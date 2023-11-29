@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:recipe_app/widgets/recipe_card.dart';
 
 import '../models/recipe_model.dart';
-import '../providers/recipes_provider.dart';
 import 'large_text.dart';
 
 class RecipesList extends StatefulWidget {
