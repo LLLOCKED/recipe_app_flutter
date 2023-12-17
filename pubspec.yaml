@@ -1,5 +1,5 @@
 name: recipe_app
-description: A new Flutter project.
+description: A new app for serach recipes.
 publish_to: "none"
 version: 0.1.0
 
@@ -12,6 +12,9 @@ dependencies:
   dio: ^5.3.3
   flutter:
     sdk: flutter
+  flutter_driver:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
   flutter_screenutil: ^5.7.0
   flutter_svg: ^2.0.5
   google_fonts: ^4.0.4
@@ -28,6 +31,12 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^2.0.0
   build_runner: ^2.3.3
+  test: ^1.22.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.png"
 
 flutter:
   assets:

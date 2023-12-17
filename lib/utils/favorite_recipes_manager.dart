@@ -31,7 +31,6 @@ class FavoriteRecipesManager {
   Future<void> removeFromFavorites(Recipe recipe) async {
     final prefs = await SharedPreferences.getInstance();
     final favoriteRecipes = await getFavoriteRecipes();
-    // favoriteRecipes.remove(recipe);
     favoriteRecipes.removeWhere((jsonString) {
       return jsonString.title == recipe.title;
     });
